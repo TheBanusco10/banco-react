@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { IniciarSesion } from './components/IniciarSesion';
+import { useState } from 'react';
+import { Cliente } from './components/Cliente';
+
 function App() {
+
+  const [cliente, setCliente] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {cliente === '' && <IniciarSesion setCliente={setCliente} />}
+      {cliente !== '' && <Cliente {...cliente} />}
     </div>
   );
 }
