@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { IniciarSesionFetch } from '../helpers/IniciarSesionFetch'
 
-export const IniciarSesion = ({setCliente}) => {
+export const IniciarSesion = ({setData}) => {
 
     const [dni, setDni] = useState('');
 
@@ -12,14 +12,10 @@ export const IniciarSesion = ({setCliente}) => {
     }
 
     function sesion(dni) {
-
-        console.log(dni);
-
         
         IniciarSesionFetch(dni)
         .then(data => {
-                setCliente(data.cliente);
-                console.log(data);
+                setData(data);
             });
 
     }
@@ -27,8 +23,7 @@ export const IniciarSesion = ({setCliente}) => {
     return (
         <div>
             <h1>Inicia sesión con tu DNI</h1>
-            <p>{dni}</p>
-            <input type="text" id="dniInput" placeholder="1234567Z" value={dni} onChange={handleDni} />
+            <input type="text" id="dniInput" placeholder="12345678Z" value={dni} onChange={handleDni} />
             <button id="iniciarSesion" onClick={ () => sesion(dni)}>Iniciar sesión</button>
         </div>
     )
