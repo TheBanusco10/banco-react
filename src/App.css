@@ -41,3 +41,34 @@
   text-align: left;
 
 }
+
+/* #crearCliente {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+}
+
+#crearClienteForm {
+
+  width: 90%;
+
+  text-align: center;
+
+}
+
+#crearClienteForm input {
+
+  width: 100%;
+
+  margin: 1rem 0;
+
+} */
+
+#crearClienteForm input {
+
+  margin: 1rem;
+
+}
