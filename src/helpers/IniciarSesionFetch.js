@@ -1,7 +1,9 @@
+const PHP_BASE = 'http://localhost:8000/src/php/'
+
 export const IniciarSesionFetch = async (dni) => {
 
     
-    let res = await fetch('https://banco-react.herokuapp.com/src/php/iniciarSesion.php', {
+    let res = await fetch(`${PHP_BASE}iniciarSesion.php`, {
         method: 'POST',
         mode: 'cors', // no-cors, *cors, same-origin
         headers: new Headers({
