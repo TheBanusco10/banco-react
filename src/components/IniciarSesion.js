@@ -29,7 +29,7 @@ export const IniciarSesion = ({setData}) => {
             <button id="iniciarSesion" onClick={ () => sesion(dni)}>Iniciar sesión</button>
             <hr />
             <button id="crearCliente" onClick={ () => setCrearCliente(true)}>Crear cliente</button>
-            <button id="crearCuenta" onClick={ () => sesion(dni)}>Crear cuenta</button>
+            <button id="crearCuenta">Crear cuenta</button>
 
             {crearCliente && <CrearCliente />}
         </div>
